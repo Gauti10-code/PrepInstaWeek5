@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><img src="ecartlogo.png" alt="Shopping Logo"></div>
+    <div class="categories">
+      <a href="#">Electronics</a>
+      <a href="#">Clothing</a>
+      <a href="#">Home</a>
+    </div>
+
+    <div class="cart-icon" onclick="toggleCart()"><img src="carticon.jpg" alt="icon">
+      Cart (<span id="cart-count">0</span>)
+    </div>
+  </nav>
+
+  <section class="products">
+    <div class="product" data-id="1" data-name="Product-1" data-price="10">
+      <h3>Product1</h3>
+      <p>10$</p>
+      <button onclick="addToCart(1)">AddToCart</button>
+    </div>
+
+    <div class="product" data-id="2" data-name="Product-2" data-price="20">
+      <h3>Product2</h3>
+      <p>20$</p>
+      <button onclick="addToCart(2)">AddToCart</button>
+    </div>
+    <div class="product" data-id="3" data-name="Product-3" data-price="30">
+      <h3>Product3</h3>
+      <p>30$</p>
+      <button onclick="addToCart(3)">AddToCart</button>
+    </div>
+
+  </section>
+
+  <section class="cart" id="cart-section" style="display:none;">
+    <h3>Shopping Cart</h3>
+    <div id="cart-items"></div>
+    <div id="cart-total">
+      Total:$<span id="cart-total">0</span>
+    </div>
+  </section>
+  <script src="cart.js"></script>
+</body>
+</html>
